@@ -1,0 +1,48 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(45deg, rgb(243, 100, 172), rgb(201, 41, 201), rgb(177, 34, 113));
+    animation: gradient 7s ease infinite;
+    background-size: 200% 200%;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.sistema{
+    position: relative;
+}
+.engrenagem1{
+    position: absolute;
+    animation: rotacao 8s infinite linear;
+}
+.engrenagem2{
+    top: 120px;
+    left: 450px;
+    position: absolute;
+    animation: rotacao_inv 8s infinite linear;
+}
+@keyframes rotacao {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+@keyframes rotacao_inv {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
